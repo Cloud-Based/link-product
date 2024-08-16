@@ -1,4 +1,5 @@
+import MarketList from "@/components/MarketList";
 
 export default function Home() {
-  return <div>Home</div>
+  return <MarketList/>
 }
