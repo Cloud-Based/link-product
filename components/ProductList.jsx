@@ -20,7 +20,6 @@ const getProducts = async () => {
 export default async function ProductList() {
 
   const { kometadventure } = await getProducts()
-  
   return (
     <>
       {kometadventure.map((p) => (
@@ -29,6 +28,12 @@ export default async function ProductList() {
             <h2 className="font-bold text-xl">{ p.title }</h2>
             <div>{ p.description }</div>
           </div>
+
+          <div>
+            <h2 className="font-bold text-xl">{ p.price }</h2>
+            <div>{ p.discount }</div>
+          </div>
+
           <div className="flex gap-2">
             <RemoveBtn />
             <Link href={"/"}>
